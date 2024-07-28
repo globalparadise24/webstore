@@ -1,6 +1,7 @@
-"""@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* Custom styles */
 body {
     font-family: 'Inter', sans-serif;
@@ -20,4 +21,4 @@ button:hover {
 }
 button:active {
     transform: translateY(0);
-}""",
+}
