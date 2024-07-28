@@ -1,6 +1,7 @@
-"""document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const postList = document.getElementById("post-list");
     const posts = ["post1.md", "post2.md"];
+
     posts.forEach(post => {
         fetch(`posts/${post}`)
             .then(response => response.text())
@@ -12,4 +13,4 @@
             })
             .catch(error => console.error("Error fetching post:", error));
     });
-});"""
+});
