@@ -1,11 +1,13 @@
-"""document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const gameText = document.getElementById("game-text");
     const userInput = document.getElementById("user-input");
     const submitBtn = document.getElementById("submit-btn");
+
     let gameState = {
         location: "start",
         inventory: []
     };
+
     const gameData = {
         "start": {
             description: "You are in a dark room. There is a door to the north.",
@@ -33,28 +35,35 @@
             }
         }
     };
+
     function updateGameText() {
         const location = gameState.location;
         const description = gameData[location].description;
         gameText.textContent = description;
     }
+
     function processInput() {
         const input = userInput.value.toLowerCase();
         const location = gameState.location;
         const options = gameData[location].options;
+
         if (input in options) {
             gameState.location = options[input];
             updateGameText();
         } else {
             gameText.textContent = "Invalid command.";
         }
+
         userInput.value = "";
     }
+
     submitBtn.addEventListener("click", processInput);
+
     userInput.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             processInput();
         }
     });
+
     updateGameText();
-});""",
+});
