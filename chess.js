@@ -1,4 +1,4 @@
-"""document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const chessboard = document.getElementById("chessboard");
     const board = [
         ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'],
@@ -10,6 +10,7 @@
         ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
         ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R']
     ];
+
     function renderBoard() {
         chessboard.innerHTML = '';
         for (let row = 0; row < 8; row++) {
@@ -21,5 +22,6 @@
             }
         }
     }
+
     renderBoard();
-});""",
+});
